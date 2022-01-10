@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-l2osb6-a-f7g=2gyljd#z3(wfvi41avvk_+qx(ibwn+a1&=t$g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['herokufigma.herokuapp.com', '127.0.0.1']
 
