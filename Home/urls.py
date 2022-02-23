@@ -11,6 +11,7 @@ router.register('categories', viewset=CategoryAPIView)
 router.register('order_items', viewset=OrderItemAPIView)
 router.register('orders', viewset=OrderAPIView)
 
+
 urlpatterns = [
     path('', views.product_list, name='product_list'),
     path('api/', include(router.urls)),

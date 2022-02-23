@@ -5,6 +5,14 @@
     <meta charset="utf-8"/>
     <title>{% block title %}My shop{% endblock %}</title>
     <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <style>
+        img.card-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 <div id="header">
@@ -12,14 +20,15 @@
 </div>
 <div id="subheader">
     <div class="cart">
+        <i class="bi-cart-fill me-1"></i>
         {% with total_items=cart|length %}
             {% if total_items > 0 %}
                 Your cart:
-                <a href="{% url "cart:cart_detail" %}">
-                    {{ total_items }} item{{ total_items|pluralize }}, ${{ cart.get_total_price }}
-                </a>
+                <span class="badge bg-dark text-white ms-1 rounded-pill"
+                      href="{% url "cart:cart_detail" %}">{{ total_items }} |${{ cart.get_total_price }}</span>
             {% else %}
-                Your cart is empty.
+                Cart:
+                <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
             {% endif %}
         {% endwith %}
     </div>
