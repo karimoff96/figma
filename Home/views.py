@@ -12,7 +12,7 @@ def product_list(request, category_slug=None):
         products = products.filter(category=category)
 
     return render(request,
-                  'shop/product/index.html',
+                  'shop/product/list.html',
                   {'category': category,
                    'categories': categories,
                    'products': products})
@@ -31,7 +31,7 @@ def product_detail(request, id, slug, category_slug=None):
         category = get_object_or_404(Category, slug=category_slug)
         products = products.filter(category=category)
     return render(request,
-                  'shop/product/index2.html',
+                  'shop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form, "categories": categories, 'products': products})
 
