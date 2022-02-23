@@ -35,6 +35,3 @@ def product_detail(request, id, slug, category_slug=None):
                   {'product': product,
                    'cart_product_form': cart_product_form, "categories": categories, 'products': products})
 
-
-def index(request):
-    return render(request, 'shop/index.html')
