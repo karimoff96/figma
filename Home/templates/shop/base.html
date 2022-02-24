@@ -23,7 +23,7 @@
         <i class="bi-cart-fill me-1"></i>
         {% with total_items=cart|length %}
             {% if total_items > 0 %}
-                Your cart:
+                Cart:
                 <span class="badge bg-dark text-white ms-1 rounded-pill"
                       href="{% url "cart:cart_detail" %}">{{ total_items }} |${{ cart.get_total_price }}</span>
             {% else %}
