@@ -112,7 +112,7 @@
                         <!-- Related items section-->
                         <section class="py-5 bg-light">
                         <div class="container px-4 px-lg-5 mt-5">
-                        <h2 class="fw-bolder mb-4">All {{ product.category }} </h2>
+                        <h2 class="fw-bolder mb-4">All related products </h2>
                         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                         {% for product in products %}
                             <div id="main" class="col mb-5">
@@ -140,8 +140,7 @@
                                         </div>
                                     </div>
                                     <div class="text-center"><a class="btn btn-outline-dark mb-4"
-                                                                href="{{ product.get_absolute_url }}">Add to
-                                        cart</a>
+                                                                href="{{ product.get_absolute_url }}">View</a>
                                     </div>
                                 </div>
                             </div>
